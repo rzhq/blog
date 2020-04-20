@@ -4,6 +4,9 @@ script:
   - npm install
   - hexo generate
 
+git:
+  depth: 1
+
 branches:
   only:
     - hexo
@@ -17,3 +20,5 @@ deploy:
   local_dir: public
   target_branch: master
   deploy_key: deploy_key
+  on:
+    branch: hexo
